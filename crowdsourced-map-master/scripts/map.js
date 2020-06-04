@@ -134,7 +134,7 @@ window.addEventListener("load", function () {
 
         form.submit();
       } else {
-        alert("Something's gone wrong: Could not access Geocoder API. Error code:" + status + ". Try entering a different location.");
+        alert("Something's gone wrong: Could not access Geocoder API. Error code:".concat(status, ". Try entering a different location."));
       }
     });
   }
