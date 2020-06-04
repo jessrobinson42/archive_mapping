@@ -33,9 +33,9 @@ function addMarker(aValue) {
 }
 
 function showInfo(aMarker, aValue){
-  let content = "<h3>"+aValue.gsx$description.$t+"</h3>";
+  let content = "<p>"+aValue.gsx$description.$t+"</p>";
   content += "<p>Date: "+aValue.gsx$date.$t+"</p>";
-  content += "<p>Setting: "+aValue.gsx$location.$t+"</p>";
+  content += "<p>Location: "+aValue.gsx$location.$t+"</p>";
   content += "<p>Time: "+aValue.gsx$time.$t+"</p>";
   info.setContent(content);
   info.open(map, aMarker);
