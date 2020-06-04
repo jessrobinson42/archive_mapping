@@ -33,10 +33,10 @@ function addMarker(aValue) {
 }
 
 function showInfo(aMarker, aValue){
-  let content = "<h3>"+aValue.gsx$booktitle.$t+"</h3>";
-  content += "<p>By: "+aValue.gsx$author.$t+"</p>";
+  let content = "<h3>"+aValue.gsx$description.$t+"</h3>";
+  content += "<p>Date: "+aValue.gsx$date.$t+"</p>";
   content += "<p>Setting: "+aValue.gsx$location.$t+"</p>";
-  content += "<p>Reader's name: "+aValue.gsx$yourname.$t+"</p>";
+  content += "<p>Time: "+aValue.gsx$time.$t+"</p>";
   info.setContent(content);
   info.open(map, aMarker);
 }
@@ -125,7 +125,7 @@ window.addEventListener("load", function () {
         let lng = result[0].geometry.location.lng();
   
         if (isNaN(lat) || isNaN(lng)) {
-          alert("Something's gone wrong. Try entering a different location for your book.");
+          alert("Something's gone wrong. Try entering a different location.");
           return;
         }
   
@@ -134,13 +134,13 @@ window.addEventListener("load", function () {
 
         form.submit();
       } else {
-        alert("Something's gone wrong. Try entering a different location for your book.");
+        alert("Something's gone wrong. Try entering a different location.");
       }
     });
   }
  
   // Access the form element...
-  var form = document.getElementById("bookForm");
+  var form = document.getElementById("spottingForm");
 
   // ...and take over its submit event.
   form.addEventListener("submit", function (event) {
