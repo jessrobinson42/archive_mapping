@@ -125,7 +125,7 @@ window.addEventListener("load", function () {
         let lng = result[0].geometry.location.lng();
   
         if (isNaN(lat) || isNaN(lng)) {
-          alert("Something's gone wrong. Try entering a different location.");
+          alert("Something's gone wrong: Latitude/longitude vals incorrect. Try entering a different location.");
           return;
         }
   
@@ -134,7 +134,7 @@ window.addEventListener("load", function () {
 
         form.submit();
       } else {
-        alert("Something's gone wrong. Try entering a different location.");
+        alert("Something's gone wrong: Could not access Geocoder API. Try entering a different location.");
       }
     });
   }
